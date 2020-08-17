@@ -1,0 +1,23 @@
+{
+  "name": "bjark-backend",
+  "version": "1.0.0",
+  "description": "Backend for bjark app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bld010/bjark-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bld010/bjark-backend/issues"
+  },
+  "homepage": "https://github.com/bld010/bjark-backend#readme",
+  "dependencies": {
+    "knex": "^0.21.5",
+    "pg": "^8.3.0"
+  }
+}
