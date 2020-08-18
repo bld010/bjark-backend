@@ -3,7 +3,14 @@ const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
 const express = require('express');
+var cors = require('cors')
+
+var corsOptions = {
+  origin: 'http://localhost:8080'
+}
+
 const app = express();
+app.use(cors());
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'bjark';
