@@ -3,12 +3,14 @@ exports.seed = async function (knex) {
     await knex('dogs').del()
     await knex('owners').del() 
     
+    const ownerId = await knex('owners').insert({name: 'Brianna'}, 'id');
 
-    return knex('owners').insert([
-      { name: 'Brianna' }, 
-      { name: 'Bryan' }, 
-      { name: 'Dorvid' }
-    ]);
+    return knex('dogs').insert({
+      name: 'Dosie',
+      breed: 'Hound',
+      owner_id: ownerId[0]
+    })
+
 
   } catch (error) {
     console.error(`Error seeding data: ${error}`)
